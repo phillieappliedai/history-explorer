@@ -1,0 +1,480 @@
+{
+  "events": [
+    {
+      "id": "genghis-khan-proclaimed-1206",
+      "name": "Temüjin Proclaimed Genghis Khan",
+      "type": "political",
+      "date": "1206-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 46.8625, "lng": 103.8467 },
+      "locationName": "Mongolia (Khentii Province)",
+      "description": "Temüjin was proclaimed Genghis Khan ('Universal Ruler') at a kurultai (assembly), uniting the Mongol tribes under a single leader for the first time in history.",
+      "significance": "This marked the beginning of the Mongol Empire, which would become the largest contiguous land empire in history.",
+      "is_narrative": true,
+      "narrative_type": "empire_founding",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+          "title": "Genghis Khan - Wikipedia",
+          "notes": "Scholarly consensus on 1206 as the founding year"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "invasion-jin-dynasty-1211",
+      "name": "Invasion of Jin Dynasty Begins",
+      "type": "conquest",
+      "date": "1211-03-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 40.0, "lng": 116.0 },
+      "locationName": "Northern China",
+      "description": "Genghis Khan launched a massive invasion of the Jin Dynasty (northern China), beginning decades of warfare that would eventually bring all of China under Mongol control.",
+      "significance": "This campaign demonstrated Mongol siege warfare capabilities and began the conquest of one of the world's most populous regions.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.92,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty",
+          "title": "Mongol conquest of the Jin dynasty - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "siege-of-beijing-1215",
+      "name": "Siege and Fall of Beijing (Zhongdu)",
+      "type": "battle",
+      "date": "1215-06-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 39.9042, "lng": 116.4074 },
+      "locationName": "Beijing (then Zhongdu), China",
+      "description": "After a prolonged siege, the Mongol forces captured Zhongdu (modern Beijing), the capital of the Jin Dynasty. The city was largely destroyed.",
+      "significance": "The fall of Beijing marked a turning point in the Jin Dynasty's ability to resist Mongol conquest.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.90,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty",
+          "title": "Mongol conquest of the Jin dynasty - Wikipedia"
+        }
+      ],
+      "casualties": {
+        "opponents": 1000000
+      },
+      "ruler": "Genghis"
+    },
+    {
+      "id": "khwarazmian-campaign-1219",
+      "name": "Invasion of Khwarazmian Empire",
+      "type": "conquest",
+      "date": "1219-09-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 39.6542, "lng": 66.9597 },
+      "locationName": "Samarkand, Khwarazm (modern Uzbekistan)",
+      "description": "Genghis Khan invaded the Khwarazmian Empire after Shah Muhammad executed Mongol envoys. This campaign would devastate Central Asia's Islamic Golden Age centers.",
+      "significance": "This invasion brought Persian-speaking territories under Mongol control and opened the path to the Middle East and Europe.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.94,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_Khwarazm",
+          "title": "Mongol conquest of Khwarazm - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis",
+      "opponents": ["Khwarazmian Empire"]
+    },
+    {
+      "id": "fall-of-samarkand-1220",
+      "name": "Fall of Samarkand",
+      "type": "battle",
+      "date": "1220-03-15",
+      "dateUncertainty": "month",
+      "location": { "lat": 39.6270, "lng": 66.9750 },
+      "locationName": "Samarkand, Uzbekistan",
+      "description": "After a brief siege, the cultural and economic center of Samarkand fell to Mongol forces. The city, one of the jewels of the Islamic world, was sacked.",
+      "significance": "The destruction of Samarkand symbolized the devastating impact of Mongol conquests on Islamic Golden Age civilization.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.91,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Samarkand_(1220)",
+          "title": "Siege of Samarkand (1220) - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis",
+      "casualties": {
+        "opponents": 30000
+      }
+    },
+    {
+      "id": "battle-kalka-river-1223",
+      "name": "Battle of the Kalka River",
+      "type": "battle",
+      "date": "1223-05-31",
+      "dateUncertainty": "exact",
+      "location": { "lat": 47.1, "lng": 37.5 },
+      "locationName": "Kalka River, Ukraine",
+      "description": "Mongol reconnaissance forces under Subutai and Jebe defeated a much larger coalition of Rus' princes and Cuman-Kipchak forces in their first encounter with European armies.",
+      "significance": "This battle demonstrated Mongol military superiority and provided intelligence for future European campaigns. It terrified European powers.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.93,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_Kalka_River",
+          "title": "Battle of the Kalka River - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis",
+      "opponents": ["Kievan Rus'", "Cumans"],
+      "outcome": "Decisive Mongol victory"
+    },
+    {
+      "id": "death-of-genghis-khan-1227",
+      "name": "Death of Genghis Khan",
+      "type": "political",
+      "date": "1227-08-18",
+      "dateUncertainty": "month",
+      "location": { "lat": 38.5, "lng": 105.5 },
+      "locationName": "Western Xia (modern Ningxia, China)",
+      "description": "Genghis Khan died during a campaign against the Western Xia, possibly from injuries sustained in a fall from his horse. His death was kept secret to prevent enemy morale from rising.",
+      "significance": "Despite his death, the empire continued to expand under his successors, eventually covering 24 million km² at its peak.",
+      "is_narrative": true,
+      "narrative_type": "political",
+      "narrative_confidence": 0.88,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan#Death_and_burial",
+          "title": "Genghis Khan - Death and burial - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "ogedei-elected-1229",
+      "name": "Ögedei Khan Elected Great Khan",
+      "type": "political",
+      "date": "1229-09-13",
+      "dateUncertainty": "month",
+      "location": { "lat": 47.3167, "lng": 102.25 },
+      "locationName": "Karakorum, Mongolia",
+      "description": "After a two-year regency, Genghis Khan's son Ögedei was formally elected as the second Great Khan at a kurultai.",
+      "significance": "Ögedei would oversee the continued expansion of the empire into Europe, the Middle East, and completion of the Jin conquest.",
+      "is_narrative": true,
+      "narrative_type": "political",
+      "narrative_confidence": 0.90,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/%C3%96gedei_Khan",
+          "title": "Ögedei Khan - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "invasion-kievan-rus-1237",
+      "name": "Invasion of Kievan Rus' Begins",
+      "type": "conquest",
+      "date": "1237-12-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 54.3, "lng": 39.8 },
+      "locationName": "Ryazan, Russia",
+      "description": "Batu Khan led a massive Mongol invasion force into Kievan Rus', beginning with the siege of Ryazan. The city fell after five days of resistance.",
+      "significance": "This campaign brought the Rus' principalities under Mongol domination for over two centuries (the 'Mongol Yoke').",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.94,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27",
+          "title": "Mongol invasion of Kievan Rus' - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei",
+      "opponents": ["Kievan Rus'"]
+    },
+    {
+      "id": "sack-of-kiev-1240",
+      "name": "Sack of Kiev",
+      "type": "battle",
+      "date": "1240-12-06",
+      "dateUncertainty": "exact",
+      "location": { "lat": 50.4501, "lng": 30.5234 },
+      "locationName": "Kiev, Ukraine",
+      "description": "Mongol forces under Batu Khan stormed and sacked Kiev, the 'mother of Rus' cities'. The city was devastated and would not recover its former prominence.",
+      "significance": "The destruction of Kiev marked the end of Kievan Rus' as a unified power and the beginning of the Mongol domination of Eastern Europe.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.92,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Kiev_(1240)",
+          "title": "Siege of Kiev (1240) - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "battle-of-legnica-1241",
+      "name": "Battle of Legnica",
+      "type": "battle",
+      "date": "1241-04-09",
+      "dateUncertainty": "exact",
+      "location": { "lat": 51.2070, "lng": 16.1619 },
+      "locationName": "Legnica, Poland",
+      "description": "Mongol forces defeated a coalition of Polish and German knights. The Mongols used feigned retreats and superior cavalry tactics to devastate the European heavy cavalry.",
+      "significance": "This battle, occurring the same day as Mohi, showed coordinated Mongol operations across vast distances and demonstrated European military inferiority.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Legnica",
+          "title": "Battle of Legnica - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei",
+      "opponents": ["Kingdom of Poland", "Teutonic Knights"],
+      "outcome": "Decisive Mongol victory",
+      "casualties": {
+        "mongols": 1000,
+        "opponents": 25000
+      }
+    },
+    {
+      "id": "battle-of-mohi-1241",
+      "name": "Battle of Mohi",
+      "type": "battle",
+      "date": "1241-04-11",
+      "dateUncertainty": "exact",
+      "location": { "lat": 47.9167, "lng": 21.1 },
+      "locationName": "Mohi, Hungary",
+      "description": "On the Sajó River, Mongol forces under Subutai and Batu Khan annihilated the Hungarian army under King Béla IV. The Hungarians suffered catastrophic losses.",
+      "significance": "Considered one of the most devastating defeats in European history. It left Central Europe defenseless and showed Mongol military supremacy.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.96,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Mohi",
+          "title": "Battle of Mohi - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei",
+      "opponents": ["Kingdom of Hungary"],
+      "outcome": "Decisive Mongol victory",
+      "casualties": {
+        "opponents": 60000
+      }
+    },
+    {
+      "id": "mongol-withdrawal-1242",
+      "name": "Mongol Withdrawal from Europe",
+      "type": "political",
+      "date": "1242-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 48.0, "lng": 20.0 },
+      "locationName": "Central Europe",
+      "description": "Following the death of Great Khan Ögedei in December 1241, Batu Khan withdrew Mongol forces from Europe to participate in the succession kurultai.",
+      "significance": "This withdrawal likely saved Western Europe from conquest. Historians debate whether Mongols would have continued westward otherwise.",
+      "is_narrative": true,
+      "narrative_type": "political",
+      "narrative_confidence": 0.89,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_invasion_of_Europe",
+          "title": "Mongol invasion of Europe - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "hulagu-campaign-1256",
+      "name": "Hulagu's Middle Eastern Campaign",
+      "type": "conquest",
+      "date": "1256-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 36.0, "lng": 51.4 },
+      "locationName": "Persia",
+      "description": "Hulagu Khan led a massive Mongol army into the Middle East with orders to subdue all Muslims who refused submission, targeting the Assassins and the Abbasid Caliphate.",
+      "significance": "This campaign would devastate the Islamic world's political and cultural centers, ending the Abbasid Caliphate.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.91,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Abbasid_Caliphate",
+          "title": "Mongol conquest of the Abbasid Caliphate - Wikipedia"
+        }
+      ],
+      "ruler": "Möngke"
+    },
+    {
+      "id": "siege-of-baghdad-1258",
+      "name": "Siege and Destruction of Baghdad",
+      "type": "battle",
+      "date": "1258-02-10",
+      "dateUncertainty": "exact",
+      "location": { "lat": 33.3152, "lng": 44.3661 },
+      "locationName": "Baghdad, Iraq",
+      "description": "Hulagu Khan's forces besieged and captured Baghdad, executing the last Abbasid Caliph and massacring much of the city's population. Libraries and scholarly works were destroyed.",
+      "significance": "The fall of Baghdad ended the Abbasid Caliphate (750-1258) and is seen as marking the end of the Islamic Golden Age. The city's population dropped from 1 million to 100,000.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.97,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Baghdad_(1258)",
+          "title": "Siege of Baghdad (1258) - Wikipedia"
+        }
+      ],
+      "ruler": "Möngke",
+      "casualties": {
+        "opponents": 200000
+      },
+      "outcome": "Mongol victory"
+    },
+    {
+      "id": "battle-ain-jalut-1260",
+      "name": "Battle of Ain Jalut",
+      "type": "battle",
+      "date": "1260-09-03",
+      "dateUncertainty": "exact",
+      "location": { "lat": 32.5, "lng": 35.3833 },
+      "locationName": "Ain Jalut, Palestine",
+      "description": "Mamluk forces under Baibars decisively defeated the Mongols under Kitbuqa. This was the first major defeat of a Mongol army at its peak and marked the westernmost extent of Mongol expansion.",
+      "significance": "This battle saved Egypt and North Africa from Mongol conquest and showed that Mongols could be defeated in open battle.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Ain_Jalut",
+          "title": "Battle of Ain Jalut - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai",
+      "opponents": ["Mamluk Sultanate"],
+      "outcome": "Mamluk victory"
+    },
+    {
+      "id": "kublai-proclaimed-1260",
+      "name": "Kublai Khan Proclaimed Great Khan",
+      "type": "political",
+      "date": "1260-05-05",
+      "dateUncertainty": "month",
+      "location": { "lat": 42.0, "lng": 119.0 },
+      "locationName": "Shangdu (Xanadu), China",
+      "description": "Kublai Khan was proclaimed Great Khan, though his younger brother Ariq Böke contested the succession, leading to civil war within the Mongol Empire.",
+      "significance": "Kublai's reign marked a shift toward Chinese administration and the beginning of the empire's fragmentation into separate khanates.",
+      "is_narrative": true,
+      "narrative_type": "political",
+      "narrative_confidence": 0.90,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kublai_Khan",
+          "title": "Kublai Khan - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai"
+    },
+    {
+      "id": "first-invasion-japan-1274",
+      "name": "First Mongol Invasion of Japan",
+      "type": "battle",
+      "date": "1274-11-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 33.3833, "lng": 130.4 },
+      "locationName": "Hakata Bay, Japan",
+      "description": "Kublai Khan's invasion force of 23,000 troops landed in Japan but was driven back by a typhoon after initial battles. The Japanese called the storm 'kamikaze' (divine wind).",
+      "significance": "This marked one of the few successful resistances to Mongol conquest, though partly due to weather rather than military defeat.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.93,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_invasions_of_Japan",
+          "title": "Mongol invasions of Japan - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai",
+      "opponents": ["Kamakura Shogunate"],
+      "outcome": "Japanese defensive success"
+    },
+    {
+      "id": "fall-of-song-dynasty-1279",
+      "name": "Fall of Song Dynasty",
+      "type": "conquest",
+      "date": "1279-03-19",
+      "dateUncertainty": "exact",
+      "location": { "lat": 21.6167, "lng": 111.9833 },
+      "locationName": "Yamen, China",
+      "description": "The Battle of Yamen resulted in the final defeat of the Song Dynasty, completing the Mongol conquest of China that began in 1211. The last Song emperor died in the battle.",
+      "significance": "This completed the conquest of China and established the Yuan Dynasty under Kublai Khan, the first non-Han dynasty to rule all of China.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.96,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Yamen",
+          "title": "Battle of Yamen - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai",
+      "outcome": "Mongol victory"
+    },
+    {
+      "id": "second-invasion-japan-1281",
+      "name": "Second Mongol Invasion of Japan",
+      "type": "battle",
+      "date": "1281-08-15",
+      "dateUncertainty": "month",
+      "location": { "lat": 33.3833, "lng": 130.4 },
+      "locationName": "Hakata Bay, Japan",
+      "description": "A much larger invasion force of 140,000 troops was again destroyed by typhoons (kamikaze) after weeks of fighting. The Mongols never attempted another invasion.",
+      "significance": "This definitive failure marked the eastern limit of Mongol expansion and preserved Japanese independence.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.94,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_invasions_of_Japan#Second_invasion_(1281)",
+          "title": "Mongol invasions of Japan - Second invasion - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai",
+      "opponents": ["Kamakura Shogunate"],
+      "outcome": "Japanese defensive success",
+      "casualties": {
+        "mongols": 100000
+      }
+    }
+  ]
+}
