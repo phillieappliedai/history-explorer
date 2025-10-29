@@ -1,26 +1,36 @@
 'use client';
 
-import { useState } from 'react';
-import HistoricalGlobe from '@/components/HistoricalGlobe';
+import { useEffect, useState } from 'react';
+import AnimatedGlobe from '@/components/AnimatedGlobe_v2';
+import TimelineControls from '@/components/TimelineControls';
 import ChatInterface from '@/components/ChatInterface';
-import mongolEventsData from '@/data/mongol-events.json';
+import { useAnimationStore, loadSequenceFromFile } from '@/lib/animationEngine';
 import type { HistoricalEvent } from '@/lib/types';
 
 export default function Home() {
-  const [events, setEvents] = useState<HistoricalEvent[]>(
-    mongolEventsData.events as HistoricalEvent[]
-  );
-  const [currentYear, setCurrentYear] = useState(1206);
-  const [focusEvent, setFocusEvent] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const { sequence, loadSequence } = useAnimationStore();
 
-  // Handle events update from chat
-  const handleEventsUpdate = (newEvents: HistoricalEvent[]) => {
-    // Merge new events with existing, avoiding duplicates
-    const eventIds = new Set(events.map(e => e.id));
-    const uniqueNew = newEvents.filter(e => !eventIds.has(e.id));
-    if (uniqueNew.length > 0) {
-      setEvents([...events, ...uniqueNew]);
+  // Load the Khwarezm conquest animation on mount
+  useEffect(() => {
+    async function loadAnimation() {
+      try {
+        const animationSequence = await loadSequenceFromFile('/data/sequences/khwarezm-conquest.json');
+        loadSequence(animationSequence);
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Failed to load animation sequence:', error);
+        setIsLoading(false);
+      }
     }
+
+    loadAnimation();
+  }, [loadSequence]);
+
+  // Handle events update from chat (legacy support)
+  const handleEventsUpdate = (newEvents: HistoricalEvent[]) => {
+    // For now, this is a no-op as we're focusing on the animation system
+    console.log('Events update requested:', newEvents);
   };
 
   return (
@@ -31,81 +41,63 @@ export default function Home() {
           <div>
             <h1 className="text-2xl font-bold text-white">History Explorer</h1>
             <p className="text-sm text-gray-400 mt-1">
-              Interactive exploration of the Mongol Empire (1206-1294)
+              {sequence
+                ? sequence.title
+                : 'Interactive animated exploration of historical events'}
             </p>
           </div>
-          <div className="flex items-center space-x-4">
+          {sequence && (
             <div className="text-right">
-              <div className="text-xs text-gray-500">Viewing Year</div>
-              <div className="text-lg font-bold text-white">{currentYear}</div>
+              <div className="text-xs text-gray-500">Time Period</div>
+              <div className="text-lg font-bold text-white">
+                {sequence.timeRange.start} - {sequence.timeRange.end}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </header>
 
       {/* Main Content */}
       <div className="flex-1 flex overflow-hidden">
-        {/* Globe */}
+        {/* Globe/Map */}
         <div className="flex-1 relative">
-          <HistoricalGlobe
-            events={events}
-            currentYear={currentYear}
-            focusEvent={focusEvent}
-          />
-
-          {/* Legend */}
-          <div className="absolute bottom-4 left-4 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-sm">
-            <div className="font-semibold text-white mb-2">Event Types</div>
-            <div className="space-y-1">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-[#d2691e]"></div>
-                <span className="text-gray-300">Conquest</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-[#ff4444]"></div>
-                <span className="text-gray-300">Battle</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-[#4169e1]"></div>
-                <span className="text-gray-300">Political</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-[#9370db]"></div>
-                <span className="text-gray-300">Cultural</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-[#ffa500]"></div>
-                <span className="text-gray-300">Economic</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 rounded-full bg-[#8b4513]"></div>
-                <span className="text-gray-300">Founding</span>
+          {isLoading ? (
+            <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d2691e] mx-auto mb-4"></div>
+                <p className="text-lg">Loading animation...</p>
               </div>
             </div>
-          </div>
+          ) : (
+            <AnimatedGlobe onMapLoad={() => console.log('Map loaded')} />
+          )}
 
           {/* Instructions */}
           <div className="absolute top-4 left-4 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 max-w-sm">
-            <div className="font-semibold text-white mb-2">Getting Started</div>
+            <div className="font-semibold text-white mb-2">Animation Controls</div>
             <ul className="text-sm text-gray-300 space-y-1">
-              <li>• Drag to rotate the globe</li>
+              <li>• Press Play to start the animation</li>
+              <li>• Drag the slider to scrub through time</li>
+              <li>• Drag the map to rotate view</li>
               <li>• Scroll to zoom in/out</li>
-              <li>• Hover over events for details</li>
-              <li>• Ask questions in the chat →</li>
+              <li>• Watch history unfold in real-time</li>
             </ul>
           </div>
         </div>
 
         {/* Chat Sidebar */}
-        <div className="w-[400px] flex flex-col">
+        <div className="w-[400px] flex flex-col border-l border-gray-700">
           <ChatInterface onEventsUpdate={handleEventsUpdate} />
         </div>
       </div>
 
+      {/* Timeline Controls at Bottom */}
+      <TimelineControls />
+
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-700 px-6 py-3 text-center text-xs text-gray-500">
         <div className="flex items-center justify-center space-x-4">
-          <span>Powered by Claude AI • All facts cited and verified</span>
+          <span>Powered by Claude AI • deck.gl • Mapbox</span>
           <a
             href="https://github.com/phillieappliedai/history-explorer"
             target="_blank"

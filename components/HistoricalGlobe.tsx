@@ -21,10 +21,10 @@ export default function HistoricalGlobe({
   const globeEl = useRef<any>();
   const [globeReady, setGlobeReady] = useState(false);
 
-  // Filter events by current year
+  // Filter events by current year - show all events up to and including currentYear
   const visibleEvents = events.filter(event => {
     const eventYear = new Date(event.date).getFullYear();
-    return Math.abs(eventYear) <= Math.abs(currentYear);
+    return eventYear <= currentYear;
   });
 
   // Focus on specific event when selected

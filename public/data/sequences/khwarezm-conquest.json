@@ -1,0 +1,358 @@
+{
+  "id": "khwarezm_conquest_1219_1221",
+  "title": "Mongol Conquest of Khwarezmian Empire",
+  "description": "Genghis Khan's campaign against the Khwarezmian Empire following the Otrar massacre",
+  "timeRange": {
+    "start": 1219,
+    "end": 1221,
+    "durationMonths": 24
+  },
+  "armies": [
+    {
+      "id": "genghis_main_force",
+      "name": "Genghis Khan's Main Army",
+      "commander": "Genghis Khan",
+      "troopCount": 150000,
+      "composition": {
+        "cavalry": 100000,
+        "infantry": 40000,
+        "siege": 10000
+      },
+      "path": [
+        [102.8, 47.2],
+        [95.0, 45.0],
+        [85.0, 44.0],
+        [75.0, 43.5],
+        [68.3, 45.5],
+        [66.0, 42.0],
+        [64.4, 39.8],
+        [66.9, 39.6]
+      ],
+      "timestamps": [0, 15, 30, 45, 60, 70, 80, 90],
+      "style": {
+        "color": "#d2691e",
+        "width": 4
+      }
+    },
+    {
+      "id": "jochi_northern_force",
+      "name": "Jochi's Northern Column",
+      "commander": "Jochi Khan",
+      "troopCount": 50000,
+      "composition": {
+        "cavalry": 40000,
+        "infantry": 8000,
+        "siege": 2000
+      },
+      "path": [
+        [102.8, 47.2],
+        [95.0, 47.0],
+        [85.0, 47.5],
+        [75.0, 48.0],
+        [68.3, 47.0],
+        [60.6, 41.5]
+      ],
+      "timestamps": [0, 15, 30, 45, 60, 85],
+      "style": {
+        "color": "#ff8c42",
+        "width": 3
+      }
+    }
+  ],
+  "cities": [
+    {
+      "id": "karakorum",
+      "name": "Karakorum",
+      "location": [102.8, 47.2],
+      "events": [
+        {
+          "timestamp": 0,
+          "state": "mongol_capital",
+          "iconSize": 40,
+          "label": "Departure Point"
+        }
+      ]
+    },
+    {
+      "id": "otrar",
+      "name": "Otrar",
+      "location": [68.3, 45.5],
+      "events": [
+        {
+          "timestamp": 0,
+          "state": "neutral",
+          "iconSize": 25
+        },
+        {
+          "timestamp": 60,
+          "state": "under_siege",
+          "iconSize": 35,
+          "label": "Siege Begins"
+        },
+        {
+          "timestamp": 70,
+          "state": "conquered",
+          "iconSize": 30,
+          "label": "City Falls"
+        }
+      ]
+    },
+    {
+      "id": "bukhara",
+      "name": "Bukhara",
+      "location": [64.4, 39.8],
+      "events": [
+        {
+          "timestamp": 0,
+          "state": "neutral",
+          "iconSize": 30
+        },
+        {
+          "timestamp": 75,
+          "state": "under_siege",
+          "iconSize": 40,
+          "label": "Siege Begins"
+        },
+        {
+          "timestamp": 80,
+          "state": "conquered",
+          "iconSize": 35,
+          "label": "City Surrenders"
+        }
+      ]
+    },
+    {
+      "id": "samarkand",
+      "name": "Samarkand",
+      "location": [66.9, 39.6],
+      "events": [
+        {
+          "timestamp": 0,
+          "state": "neutral",
+          "iconSize": 35
+        },
+        {
+          "timestamp": 85,
+          "state": "under_siege",
+          "iconSize": 45,
+          "label": "Main Target"
+        },
+        {
+          "timestamp": 90,
+          "state": "conquered",
+          "iconSize": 40,
+          "label": "Empire Capital Falls"
+        }
+      ]
+    },
+    {
+      "id": "urgench",
+      "name": "Urgench",
+      "location": [60.6, 41.5],
+      "events": [
+        {
+          "timestamp": 0,
+          "state": "neutral",
+          "iconSize": 28
+        },
+        {
+          "timestamp": 85,
+          "state": "under_siege",
+          "iconSize": 38
+        },
+        {
+          "timestamp": 95,
+          "state": "conquered",
+          "iconSize": 33,
+          "label": "Final Major City"
+        }
+      ]
+    }
+  ],
+  "territories": [
+    {
+      "id": "mongol_empire",
+      "name": "Mongol Empire",
+      "frames": [
+        {
+          "timestamp": 0,
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [100, 50],
+              [110, 50],
+              [115, 45],
+              [115, 40],
+              [105, 40],
+              [95, 45],
+              [100, 50]
+            ]]
+          },
+          "fillColor": [210, 105, 30, 80],
+          "lineColor": [210, 105, 30, 255]
+        },
+        {
+          "timestamp": 60,
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [100, 50],
+              [110, 50],
+              [115, 45],
+              [115, 40],
+              [105, 40],
+              [70, 42],
+              [65, 47],
+              [95, 45],
+              [100, 50]
+            ]]
+          },
+          "fillColor": [210, 105, 30, 80],
+          "lineColor": [210, 105, 30, 255]
+        },
+        {
+          "timestamp": 100,
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+              [100, 50],
+              [110, 50],
+              [115, 45],
+              [115, 40],
+              [105, 40],
+              [55, 38],
+              [55, 50],
+              [65, 47],
+              [95, 45],
+              [100, 50]
+            ]]
+          },
+          "fillColor": [210, 105, 30, 80],
+          "lineColor": [210, 105, 30, 255]
+        }
+      ]
+    }
+  ],
+  "cameraKeyframes": [
+    {
+      "timestamp": 0,
+      "viewState": {
+        "longitude": 102.8,
+        "latitude": 47.2,
+        "zoom": 3,
+        "pitch": 0,
+        "bearing": 0
+      },
+      "duration": 2000,
+      "label": "Starting from Karakorum"
+    },
+    {
+      "timestamp": 50,
+      "viewState": {
+        "longitude": 85.0,
+        "latitude": 44.0,
+        "zoom": 4,
+        "pitch": 15,
+        "bearing": -15
+      },
+      "duration": 2000,
+      "label": "Journey across Central Asia"
+    },
+    {
+      "timestamp": 65,
+      "viewState": {
+        "longitude": 68.3,
+        "latitude": 45.5,
+        "zoom": 6,
+        "pitch": 30,
+        "bearing": 0
+      },
+      "duration": 1500,
+      "label": "Zooming to Otrar"
+    },
+    {
+      "timestamp": 78,
+      "viewState": {
+        "longitude": 64.4,
+        "latitude": 39.8,
+        "zoom": 7,
+        "pitch": 35,
+        "bearing": 10
+      },
+      "duration": 1500,
+      "label": "Bukhara under siege"
+    },
+    {
+      "timestamp": 88,
+      "viewState": {
+        "longitude": 66.0,
+        "latitude": 40.5,
+        "zoom": 5.5,
+        "pitch": 25,
+        "bearing": -10
+      },
+      "duration": 2000,
+      "label": "Overview of conquest region"
+    }
+  ],
+  "narration": [
+    {
+      "timestamp": 0,
+      "speaker": "narrator",
+      "text": "In 1219, following the Otrar massacre where Khwarezmian forces killed Mongol envoys, Genghis Khan assembled a massive army of approximately 200,000 soldiers.",
+      "citationUrls": ["https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Khwarazmian_Empire"]
+    },
+    {
+      "timestamp": 15,
+      "speaker": "narrator",
+      "text": "The Mongol army departed from Karakorum, crossing thousands of miles of steppes and deserts toward the Khwarezmian Empire.",
+      "citationUrls": ["https://en.wikipedia.org/wiki/Mongol_invasion_of_Khwarezmia"]
+    },
+    {
+      "timestamp": 60,
+      "speaker": "narrator",
+      "text": "In autumn 1219, the Mongols reached Otrar, the city where the massacre occurred. The siege would last five months.",
+      "citationUrls": ["https://en.wikipedia.org/wiki/Siege_of_Otrar"]
+    },
+    {
+      "timestamp": 70,
+      "speaker": "narrator",
+      "text": "Otrar fell in February 1220. The governor Inalchuq, who ordered the massacre, was executed by having molten silver poured into his eyes and ears.",
+      "citationUrls": ["https://en.wikipedia.org/wiki/Siege_of_Otrar"]
+    },
+    {
+      "timestamp": 78,
+      "speaker": "narrator",
+      "text": "Genghis Khan personally led the assault on Bukhara, one of the great cultural centers of the Islamic world. The city surrendered after a brief siege in March 1220.",
+      "citationUrls": ["https://en.wikipedia.org/wiki/Siege_of_Bukhara"]
+    },
+    {
+      "timestamp": 88,
+      "speaker": "narrator",
+      "text": "In June 1220, the Mongols reached Samarkand, the capital of the Khwarezmian Empire. Despite having 100,000 defenders, the city fell after just five days.",
+      "citationUrls": ["https://en.wikipedia.org/wiki/Siege_of_Samarkand_(1220)"]
+    },
+    {
+      "timestamp": 100,
+      "speaker": "narrator",
+      "text": "By 1221, the Khwarezmian Empire had effectively ceased to exist. The Mongol Empire now stretched from the Pacific to the Caspian Sea.",
+      "citationUrls": ["https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Khwarazmian_Empire"]
+    }
+  ],
+  "metadata": {
+    "historicalAccuracy": "medium",
+    "sources": [
+      "Wikipedia: Mongol conquest of the Khwarazmian Empire",
+      "The Secret History of the Mongols",
+      "Various historical atlases for territorial boundaries"
+    ],
+    "notes": [
+      "Army paths are estimated based on known historical routes",
+      "Exact dates compressed into relative timeline (0-100)",
+      "Territory polygons are simplified representations",
+      "Timestamps represent relative progression, not exact dates"
+    ],
+    "createdDate": "2025-10-28",
+    "version": "1.0"
+  }
+}
