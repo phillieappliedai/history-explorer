@@ -11,7 +11,7 @@ export default function ChatInterface({ onEventsUpdate }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<ConversationMessage[]>([
     {
       role: 'assistant',
-      content: 'Welcome to History Explorer! Ask me anything about the Mongol Empire (1206-1294). Try: "Show me how Genghis Khan conquered the world" or "What was happening in Europe in 1241?"'
+      content: 'Welcome to History Explorer! 🚀\n\nBuild an interactive timeline by asking about historical events. Try:\n\n• "Tell me about Genghis Khan"\n• "What was happening in Europe in 1241?"\n• "Connect Genghis Khan to the Black Death"\n\nEvents will appear on the timeline as we chat!'
     }
   ]);
   const [input, setInput] = useState('');
@@ -38,7 +38,7 @@ export default function ChatInterface({ onEventsUpdate }: ChatInterfaceProps) {
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
 
     try {
-      const response = await fetch('/api/query', {
+      const response = await fetch('/api/timeline', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -59,10 +59,12 @@ export default function ChatInterface({ onEventsUpdate }: ChatInterfaceProps) {
         content: data.answer
       }]);
 
-      // Update globe with new events
-      if (data.events && data.events.length > 0) {
-        onEventsUpdate(data.events);
-      }
+      // Update timeline with new events, connections, and highlighted path
+      onEventsUpdate({
+        events: data.events || [],
+        connections: data.connections || [],
+        highlightPath: data.highlightPath || []
+      });
 
     } catch (error) {
       console.error('Chat error:', error);
@@ -76,11 +78,11 @@ export default function ChatInterface({ onEventsUpdate }: ChatInterfaceProps) {
   };
 
   const suggestedQuestions = [
-    "Show me Genghis Khan's major conquests",
+    "Tell me about Genghis Khan",
     "What was happening in Europe in 1241?",
-    "Explain the Battle of Mohi",
-    "How did the Mongol Empire expand so quickly?",
-    "What happened after Genghis Khan died?"
+    "Connect Genghis Khan to the Renaissance",
+    "Show me the fall of Rome",
+    "Find the path from Mongol Empire to Black Death"
   ];
 
   return (

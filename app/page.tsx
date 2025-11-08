@@ -1,108 +1,114 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ChatInterface from '@/components/ChatInterface';
-import HistoricalGlobe from '@/components/HistoricalGlobe';
-import type { HistoricalEvent } from '@/lib/types';
-import weatherfordBook from '@/data/weatherford-genghis-khan.json';
+import ConversationalTimeline from '@/components/ConversationalTimeline';
+
+interface TimelineEvent {
+  id: string;
+  date: string;
+  year: number;
+  title: string;
+  description: string;
+  category: string;
+  source: 'user_query' | 'claude_added';
+}
+
+interface EventConnection {
+  from: string;
+  to: string;
+  type: 'caused' | 'influenced' | 'concurrent' | 'geographical';
+  strength: number;
+  label?: string;
+}
 
 export default function Home() {
-  const [events, setEvents] = useState<HistoricalEvent[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [timelineEvents, setTimelineEvents] = useState<TimelineEvent[]>([]);
+  const [connections, setConnections] = useState<EventConnection[]>([]);
+  const [highlightPath, setHighlightPath] = useState<string[]>([]);
 
-  // Load Weatherford book events on mount
-  useEffect(() => {
-    try {
-      setEvents(weatherfordBook.events as HistoricalEvent[]);
-      setIsLoading(false);
-    } catch (error) {
-      console.error('Failed to load events:', error);
-      setIsLoading(false);
+  // Handle timeline updates from chat
+  const handleTimelineUpdate = (data: any) => {
+    if (data.events) {
+      setTimelineEvents(prev => [...prev, ...data.events]);
     }
-  }, []);
-
-  // Handle events update from chat
-  const handleEventsUpdate = (newEvents: HistoricalEvent[]) => {
-    console.log('Events update requested:', newEvents);
+    if (data.connections) {
+      setConnections(prev => [...prev, ...data.connections]);
+    }
+    if (data.highlightPath) {
+      setHighlightPath(data.highlightPath);
+    }
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-950">
-      {/* Header */}
-      <header className="bg-gray-900 border-b border-gray-700 px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-white">History Explorer</h1>
-            <p className="text-sm text-gray-400 mt-1">
-              <span className="font-semibold text-gray-300">{weatherfordBook.book.title}</span> by {weatherfordBook.book.author}
-            </p>
-            <p className="text-xs text-gray-500 mt-1">
-              {weatherfordBook.book.description}
-            </p>
-          </div>
-          <div className="text-right">
-            <div className="text-xs text-gray-500">Book Published</div>
-            <div className="text-lg font-bold text-white">{weatherfordBook.book.published}</div>
-            <div className="text-xs text-gray-500 mt-2">Events</div>
-            <div className="text-lg font-bold text-[#d2691e]">{events.length} mapped</div>
-          </div>
+    <div className="flex h-screen bg-gray-950">
+      {/* Chat Sidebar - LEFT */}
+      <div className="w-[400px] flex flex-col border-r border-gray-700">
+        <div className="bg-gray-900 border-b border-gray-700 px-4 py-3">
+          <h2 className="text-lg font-bold text-white">💬 Conversation</h2>
+          <p className="text-xs text-gray-400 mt-1">
+            Ask about history and build your timeline
+          </p>
         </div>
-      </header>
-
-      {/* Main Content */}
-      <div className="flex-1 flex overflow-hidden">
-        {/* Globe/Map */}
-        <div className="flex-1 relative">
-          {isLoading ? (
-            <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d2691e] mx-auto mb-4"></div>
-                <p className="text-lg">Loading timeline...</p>
-              </div>
-            </div>
-          ) : (
-            <HistoricalGlobe
-              events={events}
-              currentYear={1368}
-            />
-          )}
-
-          {/* Instructions */}
-          <div className="absolute top-4 left-4 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 max-w-md">
-            <div className="font-semibold text-white mb-2">📚 Book Timeline View</div>
-            <ul className="text-sm text-gray-300 space-y-1">
-              <li>• <span className="text-[#d2691e] font-semibold">{events.length} events</span> from Weatherford's book</li>
-              <li>• Rotate the globe to explore geographically</li>
-              <li>• Hover over events to see details</li>
-              <li>• Click events to learn more</li>
-              <li>• Use chat to ask questions about the book</li>
-            </ul>
-            <div className="mt-3 pt-3 border-t border-gray-700 text-xs text-gray-400">
-              Timeline: 1162 (Genghis Khan's birth) - 1368 (Fall of Yuan Dynasty)
-            </div>
-          </div>
-        </div>
-
-        {/* Chat Sidebar */}
-        <div className="w-[400px] flex flex-col border-l border-gray-700">
-          <ChatInterface onEventsUpdate={handleEventsUpdate} />
-        </div>
+        <ChatInterface onEventsUpdate={handleTimelineUpdate} />
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 border-t border-gray-700 px-6 py-3 text-center text-xs text-gray-500">
-        <div className="flex items-center justify-center space-x-4">
-          <span>Powered by Claude AI • deck.gl • Mapbox</span>
-          <a
-            href="https://github.com/phillieappliedai/history-explorer"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-300"
-          >
-            View on GitHub
-          </a>
+      {/* Timeline - RIGHT (main area) */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Header */}
+        <header className="bg-gray-900 border-b border-gray-700 px-6 py-3">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-xl font-bold text-white">📊 Historical Timeline</h1>
+              <p className="text-xs text-gray-400 mt-0.5">
+                Build your timeline through conversation • Find connections between events
+              </p>
+            </div>
+            <div className="text-right">
+              <div className="text-xs text-gray-500">Events on Timeline</div>
+              <div className="text-2xl font-bold text-[#d2691e]">{timelineEvents.length}</div>
+            </div>
+          </div>
+        </header>
+
+        {/* Timeline View */}
+        <div className="flex-1 overflow-hidden">
+          <ConversationalTimeline
+            events={timelineEvents}
+            connections={connections}
+            highlightPath={highlightPath}
+          />
         </div>
-      </footer>
+
+        {/* Instructions overlay (shows when empty) */}
+        {timelineEvents.length === 0 && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-lg p-8 max-w-lg pointer-events-auto">
+              <h3 className="text-2xl font-bold text-white mb-4">🚀 Welcome to History Explorer!</h3>
+              <p className="text-gray-300 mb-4">
+                Build an interactive timeline by asking Claude about historical events.
+              </p>
+              <div className="space-y-3 text-sm text-gray-400">
+                <p className="flex items-start gap-2">
+                  <span className="text-[#d2691e] font-bold">1.</span>
+                  <span>Ask about any historical event: <span className="text-white">"Tell me about Genghis Khan"</span></span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="text-[#d2691e] font-bold">2.</span>
+                  <span>Explore connections: <span className="text-white">"What was happening in Europe?"</span></span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="text-[#d2691e] font-bold">3.</span>
+                  <span>Find paths: <span className="text-white">"Connect Genghis Khan to the Black Death"</span></span>
+                </p>
+              </div>
+              <div className="mt-6 p-3 bg-blue-900/30 border border-blue-700 rounded text-xs text-blue-200">
+                💡 <span className="font-semibold">Pro tip:</span> Events appear as you chat. Hover to see connections!
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
