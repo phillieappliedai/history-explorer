@@ -1,35 +1,28 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import AnimatedGlobe from '@/components/AnimatedGlobe_v2';
-import TimelineControls from '@/components/TimelineControls';
 import ChatInterface from '@/components/ChatInterface';
-import { useAnimationStore, loadSequenceFromFile } from '@/lib/animationEngine';
+import HistoricalGlobe from '@/components/HistoricalGlobe';
 import type { HistoricalEvent } from '@/lib/types';
+import weatherfordBook from '@/data/weatherford-genghis-khan.json';
 
 export default function Home() {
+  const [events, setEvents] = useState<HistoricalEvent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { sequence, loadSequence } = useAnimationStore();
 
-  // Load the Khwarezm conquest animation on mount
+  // Load Weatherford book events on mount
   useEffect(() => {
-    async function loadAnimation() {
-      try {
-        const animationSequence = await loadSequenceFromFile('/data/sequences/khwarezm-conquest.json');
-        loadSequence(animationSequence);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Failed to load animation sequence:', error);
-        setIsLoading(false);
-      }
+    try {
+      setEvents(weatherfordBook.events as HistoricalEvent[]);
+      setIsLoading(false);
+    } catch (error) {
+      console.error('Failed to load events:', error);
+      setIsLoading(false);
     }
+  }, []);
 
-    loadAnimation();
-  }, [loadSequence]);
-
-  // Handle events update from chat (legacy support)
+  // Handle events update from chat
   const handleEventsUpdate = (newEvents: HistoricalEvent[]) => {
-    // For now, this is a no-op as we're focusing on the animation system
     console.log('Events update requested:', newEvents);
   };
 
@@ -41,19 +34,18 @@ export default function Home() {
           <div>
             <h1 className="text-2xl font-bold text-white">History Explorer</h1>
             <p className="text-sm text-gray-400 mt-1">
-              {sequence
-                ? sequence.title
-                : 'Interactive animated exploration of historical events'}
+              <span className="font-semibold text-gray-300">{weatherfordBook.book.title}</span> by {weatherfordBook.book.author}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              {weatherfordBook.book.description}
             </p>
           </div>
-          {sequence && (
-            <div className="text-right">
-              <div className="text-xs text-gray-500">Time Period</div>
-              <div className="text-lg font-bold text-white">
-                {sequence.timeRange.start} - {sequence.timeRange.end}
-              </div>
-            </div>
-          )}
+          <div className="text-right">
+            <div className="text-xs text-gray-500">Book Published</div>
+            <div className="text-lg font-bold text-white">{weatherfordBook.book.published}</div>
+            <div className="text-xs text-gray-500 mt-2">Events</div>
+            <div className="text-lg font-bold text-[#d2691e]">{events.length} mapped</div>
+          </div>
         </div>
       </header>
 
@@ -65,23 +57,29 @@ export default function Home() {
             <div className="w-full h-full flex items-center justify-center bg-gray-900 text-white">
               <div className="text-center">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d2691e] mx-auto mb-4"></div>
-                <p className="text-lg">Loading animation...</p>
+                <p className="text-lg">Loading timeline...</p>
               </div>
             </div>
           ) : (
-            <AnimatedGlobe onMapLoad={() => console.log('Map loaded')} />
+            <HistoricalGlobe
+              events={events}
+              currentYear={1368}
+            />
           )}
 
           {/* Instructions */}
-          <div className="absolute top-4 left-4 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 max-w-sm">
-            <div className="font-semibold text-white mb-2">Animation Controls</div>
+          <div className="absolute top-4 left-4 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 max-w-md">
+            <div className="font-semibold text-white mb-2">📚 Book Timeline View</div>
             <ul className="text-sm text-gray-300 space-y-1">
-              <li>• Press Play to start the animation</li>
-              <li>• Drag the slider to scrub through time</li>
-              <li>• Drag the map to rotate view</li>
-              <li>• Scroll to zoom in/out</li>
-              <li>• Watch history unfold in real-time</li>
+              <li>• <span className="text-[#d2691e] font-semibold">{events.length} events</span> from Weatherford's book</li>
+              <li>• Rotate the globe to explore geographically</li>
+              <li>• Hover over events to see details</li>
+              <li>• Click events to learn more</li>
+              <li>• Use chat to ask questions about the book</li>
             </ul>
+            <div className="mt-3 pt-3 border-t border-gray-700 text-xs text-gray-400">
+              Timeline: 1162 (Genghis Khan's birth) - 1368 (Fall of Yuan Dynasty)
+            </div>
           </div>
         </div>
 
@@ -90,9 +88,6 @@ export default function Home() {
           <ChatInterface onEventsUpdate={handleEventsUpdate} />
         </div>
       </div>
-
-      {/* Timeline Controls at Bottom */}
-      <TimelineControls />
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-700 px-6 py-3 text-center text-xs text-gray-500">

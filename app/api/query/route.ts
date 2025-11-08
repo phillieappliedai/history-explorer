@@ -1,6 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest, NextResponse } from 'next/server';
-import mongolEvents from '@/data/mongol-events.json';
+import weatherfordBook from '@/data/weatherford-genghis-khan.json';
 import type { HistoricalEvent, ConversationMessage } from '@/lib/types';
 
 const anthropic = new Anthropic({
@@ -18,7 +18,8 @@ CRITICAL RULES:
 5. For interpretive questions (causation, "why"), present multiple scholarly views when they exist
 
 AVAILABLE DATA:
-- Curated Mongol Empire events (1206-1294) via getCoreEvents tool
+- Events from "Genghis Khan and the Making of the Modern World" by Jack Weatherford (1162-1368)
+- 34 curated events with full citations and book context
 - Extended historical data via Wikidata (use cautiously, note it's from Wikidata)
 
 When users ask questions like "What was happening in X when Y?":
@@ -36,7 +37,7 @@ You have access to three specialized skills:
 const tools: Anthropic.Tool[] = [
   {
     name: 'getCoreEvents',
-    description: 'Get curated Mongol Empire events from the verified dataset. Use this first before querying external sources. Can filter by year range, event type, or location.',
+    description: 'Get events from "Genghis Khan and the Making of the Modern World" by Jack Weatherford. Use this first before querying external sources. Can filter by year range, event type, or search term.',
     input_schema: {
       type: 'object',
       properties: {
@@ -101,7 +102,7 @@ const tools: Anthropic.Tool[] = [
 
 // Tool execution functions
 function executeCoreEvents(params: any): HistoricalEvent[] {
-  let filtered = mongolEvents.events as HistoricalEvent[];
+  let filtered = weatherfordBook.events as HistoricalEvent[];
 
   if (params.startYear || params.endYear) {
     filtered = filtered.filter(event => {
@@ -128,7 +129,7 @@ function executeCoreEvents(params: any): HistoricalEvent[] {
 }
 
 function executeGetEventDetails(params: any): HistoricalEvent | null {
-  const event = mongolEvents.events.find((e: any) => e.id === params.eventId);
+  const event = weatherfordBook.events.find((e: any) => e.id === params.eventId);
   return event as HistoricalEvent || null;
 }
 
@@ -137,7 +138,7 @@ function executeGetContemporaryEvents(params: any): HistoricalEvent[] {
   const startYear = year - timeWindow;
   const endYear = year + timeWindow;
 
-  return mongolEvents.events.filter((event: any) => {
+  return weatherfordBook.events.filter((event: any) => {
     const eventYear = new Date(event.date).getFullYear();
     return eventYear >= startYear && eventYear <= endYear;
   }) as HistoricalEvent[];

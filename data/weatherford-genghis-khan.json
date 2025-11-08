@@ -1,0 +1,765 @@
+{
+  "book": {
+    "title": "Genghis Khan and the Making of the Modern World",
+    "author": "Jack Weatherford",
+    "published": 2004,
+    "isbn": "9780609809648",
+    "description": "A revisionist perspective on Genghis Khan and the Mongol Empire, challenging traditional Western views and highlighting the progressive aspects of Mongol rule and their lasting impact on world civilization."
+  },
+  "events": [
+    {
+      "id": "temujin-birth-1162",
+      "name": "Birth of Temüjin (Genghis Khan)",
+      "type": "political",
+      "date": "1162-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 48.0, "lng": 111.0 },
+      "locationName": "Near Onon River, Mongolia",
+      "description": "Temüjin was born with a blood clot in his hand, considered an omen of great leadership. He would become Genghis Khan.",
+      "significance": "Beginning of the life of the man who would unite the Mongol tribes and create the largest contiguous land empire in history.",
+      "is_narrative": true,
+      "narrative_type": "birth",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+          "title": "Genghis Khan - Wikipedia",
+          "notes": "From Weatherford's book - Chapter 1: The Blood Clot"
+        }
+      ]
+    },
+    {
+      "id": "borte-abduction-1180",
+      "name": "Abduction of Börte",
+      "type": "political",
+      "date": "1180-01-01",
+      "dateUncertainty": "circa",
+      "location": { "lat": 47.5, "lng": 107.0 },
+      "locationName": "Mongolian Steppe",
+      "description": "Börte, Temüjin's wife, was abducted by the Merkits. Temüjin formed powerful alliances to rescue her, demonstrating his emerging leadership.",
+      "significance": "First demonstration of Temüjin's ability to forge alliances and his determination. This event shaped his path to power.",
+      "is_narrative": true,
+      "narrative_type": "personal",
+      "narrative_confidence": 0.75,
+      "sources": [
+        {
+          "type": "curated",
+          "url": "https://en.wikipedia.org/wiki/B%C3%B6rte",
+          "title": "Weatherford book - Part I: The Reign of Terror on the Steppe"
+        }
+      ]
+    },
+    {
+      "id": "genghis-khan-proclaimed-1206",
+      "name": "Temüjin Proclaimed Genghis Khan",
+      "type": "political",
+      "date": "1206-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 48.7, "lng": 110.0 },
+      "locationName": "Onon River, Mongolia",
+      "description": "At a great kurultai (assembly), Temüjin was proclaimed 'Genghis Khan' (Universal Ruler), uniting the Mongol tribes under a single leader for the first time.",
+      "significance": "Founding of the Mongol Empire. Weatherford emphasizes this marked the beginning of unprecedented cultural exchange and expanded trade.",
+      "is_narrative": true,
+      "narrative_type": "empire_founding",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+          "title": "Genghis Khan - Wikipedia",
+          "notes": "Weatherford: This marks the beginning of conquests that subjugated more lands in 25 years than Rome in 400"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "western-xia-raid-1209",
+      "name": "Raid on Western Xia",
+      "type": "conquest",
+      "date": "1209-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 38.0, "lng": 105.0 },
+      "locationName": "Western Xia Kingdom",
+      "description": "Genghis Khan led a large-scale raid into the Western Xia, who agreed to Mongol terms the following year.",
+      "significance": "First major external conquest, establishing Mongol military reputation beyond the steppe.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.85,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+          "title": "Genghis Khan conquests - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "jin-invasion-1211",
+      "name": "Invasion of Jin Dynasty Begins",
+      "type": "conquest",
+      "date": "1211-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 40.0, "lng": 116.0 },
+      "locationName": "Northern China",
+      "description": "Genghis Khan declared war on the Jin Dynasty, beginning a 23-year conflict. The Mongol armies invaded from the north in three groups.",
+      "significance": "Weatherford describes this as demonstrating Mongol siege warfare capabilities and beginning the conquest of one of the world's most populous regions.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty",
+          "title": "Mongol conquest of the Jin dynasty - Wikipedia",
+          "notes": "Part II: The Mongol World War (1211-1261)"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "yehuling-battle-1211",
+      "name": "Battle of Yehuling",
+      "type": "battle",
+      "date": "1211-09-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 40.8, "lng": 114.9 },
+      "locationName": "Zhangjiakou, China",
+      "description": "First major battle between the Mongol Empire and Jin dynasty at a mountain pass. Decisive Mongol victory.",
+      "significance": "Key victory opening the path to Beijing and demonstrating superior Mongol cavalry tactics.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.8,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty",
+          "title": "Mongol conquest of Jin dynasty - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis",
+      "outcome": "Decisive Mongol victory"
+    },
+    {
+      "id": "beijing-siege-1215",
+      "name": "Siege and Capture of Beijing (Zhongdu)",
+      "type": "battle",
+      "date": "1215-06-01",
+      "dateUncertainty": "exact",
+      "location": { "lat": 39.9042, "lng": 116.4074 },
+      "locationName": "Beijing (Zhongdu), China",
+      "description": "After years of campaigning, the Mongols besieged and captured the Jin capital of Zhongdu (modern Beijing), sacking the city.",
+      "significance": "Capture of one of Asia's greatest cities. Weatherford notes this brought northern China under Mongol control.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Zhongdu",
+          "title": "Battle of Zhongdu - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis",
+      "outcome": "Mongol victory"
+    },
+    {
+      "id": "qara-khitai-annexed-1218",
+      "name": "Annexation of Qara Khitai",
+      "type": "conquest",
+      "date": "1218-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 42.0, "lng": 78.0 },
+      "locationName": "Central Asia",
+      "description": "General Jebe annexed the Central Asian state of Qara Khitai, expanding Mongol territory westward.",
+      "significance": "Extended Mongol influence into Central Asia, setting stage for conflict with Khwarazm.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.8,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+          "title": "Genghis Khan conquests - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "otrar-massacre-1218",
+      "name": "Otrar Massacre",
+      "type": "political",
+      "date": "1218-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 45.6, "lng": 60.4 },
+      "locationName": "Otrar, Kazakhstan",
+      "description": "The governor of Otrar seized a Mongol trade caravan and executed the merchants. Genghis Khan sent envoys demanding justice; they were murdered.",
+      "significance": "Weatherford emphasizes this as the casus belli for the devastating Mongol conquest of the Khwarazmian Empire. The Khan's commitment to protecting trade routes is highlighted.",
+      "is_narrative": true,
+      "narrative_type": "diplomatic_incident",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "curated",
+          "url": "https://en.wikipedia.org/wiki/Otrar",
+          "title": "Weatherford - Chapter 4: Spitting on the Golden Khan"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "khwarazm-invasion-1219",
+      "name": "Invasion of Khwarazmian Empire",
+      "type": "conquest",
+      "date": "1219-09-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 40.0, "lng": 65.0 },
+      "locationName": "Central Asia / Persia",
+      "description": "Genghis Khan invaded the Khwarazmian Empire in retaliation for the Otrar massacre, beginning one of history's most devastating campaigns.",
+      "significance": "Weatherford describes this as toppling a vast Central Asian empire and opening the path to the Middle East and Europe.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_Khwarazm",
+          "title": "Mongol conquest of Khwarazm - Wikipedia",
+          "notes": "Weatherford - Chapter 5: Sultan versus Khan"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "bukhara-siege-1220",
+      "name": "Siege of Bukhara",
+      "type": "battle",
+      "date": "1220-02-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 39.7747, "lng": 64.4286 },
+      "locationName": "Bukhara, Uzbekistan",
+      "description": "The Mongols besieged and captured Bukhara, one of the greatest cities of Central Asia. Much of the city was destroyed.",
+      "significance": "Weatherford describes the destruction of this major cultural and commercial center. Key event in the Khwarazm conquest highlighted in the book.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Bukhara",
+          "title": "Siege of Bukhara - Wikipedia",
+          "notes": "Weatherford emphasizes this in Chapter 5"
+        }
+      ],
+      "ruler": "Genghis",
+      "outcome": "Mongol victory"
+    },
+    {
+      "id": "samarkand-conquest-1220",
+      "name": "Conquest of Samarkand",
+      "type": "battle",
+      "date": "1220-03-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 39.6270, "lng": 66.9750 },
+      "locationName": "Samarkand, Uzbekistan",
+      "description": "After Bukhara, the Mongols conquered Samarkand, another jewel of the Silk Road and major center of Islamic culture.",
+      "significance": "Further expansion of Mongol control over Central Asian trade routes. Weatherford notes the irony that Mongol destruction ultimately revitalized these trade networks.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.85,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Samarkand_(1220)",
+          "title": "Siege of Samarkand - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis",
+      "outcome": "Mongol victory"
+    },
+    {
+      "id": "transoxiana-devastation-1220",
+      "name": "Devastation of Transoxiana and Khorasan",
+      "type": "conquest",
+      "date": "1220-06-01",
+      "dateUncertainty": "period",
+      "location": { "lat": 38.0, "lng": 60.0 },
+      "locationName": "Eastern Persia / Central Asia",
+      "description": "The Mongol armies systematically devastated the regions of Transoxiana and Khorasan, destroying cities and agricultural infrastructure.",
+      "significance": "Weatherford documents the massive demographic and economic impact, while also noting how this destruction paradoxically led to later cultural integration.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.85,
+      "sources": [
+        {
+          "type": "curated",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_Khwarazm",
+          "title": "Weatherford - Part II: The Mongol World War"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "kalka-river-1223",
+      "name": "Battle of the Kalka River",
+      "type": "battle",
+      "date": "1223-05-31",
+      "dateUncertainty": "exact",
+      "location": { "lat": 47.1, "lng": 37.5 },
+      "locationName": "Kalka River, Ukraine",
+      "description": "Mongol reconnaissance forces under Subutai and Jebe defeated a much larger coalition of Rus' princes in their first encounter with European armies.",
+      "significance": "Weatherford emphasizes this demonstrated Mongol military superiority and provided intelligence for future European campaigns.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.93,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_Kalka_River",
+          "title": "Battle of the Kalka River - Wikipedia"
+        }
+      ],
+      "ruler": "Genghis",
+      "opponents": ["Kievan Rus'", "Cumans"],
+      "outcome": "Decisive Mongol victory"
+    },
+    {
+      "id": "genghis-death-1227",
+      "name": "Death of Genghis Khan",
+      "type": "political",
+      "date": "1227-08-18",
+      "dateUncertainty": "month",
+      "location": { "lat": 38.5, "lng": 105.5 },
+      "locationName": "Western Xia (modern Gansu, China)",
+      "description": "Genghis Khan died during a campaign against the Tangut kingdom. In early 1227, a horse threw him, causing internal injuries from which he never recovered.",
+      "significance": "Weatherford notes that despite his death, the empire continued to expand under his successors, eventually covering 24 million km². His legal code and administrative systems persisted.",
+      "is_narrative": true,
+      "narrative_type": "death",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Genghis_Khan#Death_and_burial",
+          "title": "Genghis Khan - Death - Wikipedia",
+          "notes": "Weatherford discusses his hidden burial and lasting legacy"
+        }
+      ],
+      "ruler": "Genghis"
+    },
+    {
+      "id": "ogedei-elected-1229",
+      "name": "Ögedei Khan Elected Great Khan",
+      "type": "political",
+      "date": "1229-09-13",
+      "dateUncertainty": "month",
+      "location": { "lat": 47.3167, "lng": 102.25 },
+      "locationName": "Karakorum, Mongolia",
+      "description": "At a kurultai, Ogedei, Genghis Khan's third son, was formally elected as the new Great Khan, succeeding his father.",
+      "significance": "Weatherford notes Ogedei departed from tradition by building a permanent capital city (Karakorum), marking a shift toward more settled governance.",
+      "is_narrative": true,
+      "narrative_type": "succession",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/%C3%96gedei_Khan",
+          "title": "Ögedei Khan - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "jin-conquest-complete-1234",
+      "name": "Completion of Jin Dynasty Conquest",
+      "type": "conquest",
+      "date": "1234-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 34.0, "lng": 113.0 },
+      "locationName": "Central China",
+      "description": "The Jin dynasty finally collapsed after the siege of Caizhou, completing the conquest begun by Genghis Khan in 1211.",
+      "significance": "Elimination of major rival power in northern China, consolidating Mongol control.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty",
+          "title": "Mongol conquest of Jin dynasty - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "russia-invasion-1237",
+      "name": "Mongol Invasion of Russia Begins",
+      "type": "conquest",
+      "date": "1237-12-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 55.0, "lng": 40.0 },
+      "locationName": "Russia",
+      "description": "Under Batu Khan and General Subutai, the Mongols launched a massive invasion of the Russian principalities.",
+      "significance": "Weatherford describes this as beginning the Mongol domination of Eastern Europe. Chapter 6: The Discovery and Conquest of Europe.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_invasion_of_Europe",
+          "title": "Mongol invasion of Europe - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "kiev-sack-1240",
+      "name": "Sack of Kiev",
+      "type": "battle",
+      "date": "1240-12-06",
+      "dateUncertainty": "exact",
+      "location": { "lat": 50.4501, "lng": 30.5234 },
+      "locationName": "Kiev, Ukraine",
+      "description": "Mongol forces under Batu Khan stormed and sacked Kiev, the 'mother of Rus' cities'. The city was devastated and would not recover its former prominence.",
+      "significance": "Destruction of Kiev marked the end of Kievan Rus' as a unified power.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.92,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Kiev_(1240)",
+          "title": "Siege of Kiev (1240) - Wikipedia"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "legnica-battle-1241",
+      "name": "Battle of Legnica",
+      "type": "battle",
+      "date": "1241-04-09",
+      "dateUncertainty": "exact",
+      "location": { "lat": 51.2070, "lng": 16.1619 },
+      "locationName": "Legnica, Poland",
+      "description": "Mongol forces defeated a coalition of Polish and German knights. Duke Henry II was killed and beheaded. The Mongols used superior tactics to devastate European heavy cavalry.",
+      "significance": "Weatherford emphasizes this battle, occurring the same day as Mohi, showed coordinated Mongol operations across vast distances and European military inferiority.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Legnica",
+          "title": "Battle of Legnica - Wikipedia",
+          "notes": "Weatherford - Chapter 6: The Discovery and Conquest of Europe"
+        }
+      ],
+      "ruler": "Ögedei",
+      "opponents": ["Kingdom of Poland", "Teutonic Knights"],
+      "outcome": "Decisive Mongol victory",
+      "casualties": {
+        "mongols": 1000,
+        "opponents": 25000
+      }
+    },
+    {
+      "id": "mohi-battle-1241",
+      "name": "Battle of Mohi",
+      "type": "battle",
+      "date": "1241-04-11",
+      "dateUncertainty": "exact",
+      "location": { "lat": 47.9167, "lng": 21.1 },
+      "locationName": "Mohi, Hungary",
+      "description": "Batu Khan and Subutai inflicted a devastating defeat on King Béla IV's Hungarian army. Weatherford notes this killed half of Hungary's population.",
+      "significance": "Considered one of the most devastating defeats in European history. It left Central Europe defenseless and demonstrated Mongol military supremacy at its peak.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.96,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Mohi",
+          "title": "Battle of Mohi - Wikipedia",
+          "notes": "Major focus of Weatherford's Chapter 6"
+        }
+      ],
+      "ruler": "Ögedei",
+      "opponents": ["Kingdom of Hungary"],
+      "outcome": "Decisive Mongol victory",
+      "casualties": {
+        "opponents": 60000
+      }
+    },
+    {
+      "id": "ogedei-death-1241",
+      "name": "Death of Ögedei Khan",
+      "type": "political",
+      "date": "1241-12-11",
+      "dateUncertainty": "exact",
+      "location": { "lat": 47.3167, "lng": 102.25 },
+      "locationName": "Karakorum, Mongolia",
+      "description": "The Great Khan Ögedei died, causing all Mongol princes to return to Mongolia for the succession kurultai. This ended the westward expansion into Europe.",
+      "significance": "Weatherford argues this death likely saved Western Europe from Mongol invasion. The succession crisis halted what could have been a complete conquest of Europe.",
+      "is_narrative": true,
+      "narrative_type": "death",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/%C3%96gedei_Khan",
+          "title": "Ögedei Khan - Wikipedia",
+          "notes": "Weatherford discusses the significance in Part II conclusion"
+        }
+      ],
+      "ruler": "Ögedei"
+    },
+    {
+      "id": "mongke-elected-1251",
+      "name": "Möngke Khan Elected Great Khan",
+      "type": "political",
+      "date": "1251-07-01",
+      "dateUncertainty": "month",
+      "location": { "lat": 47.3167, "lng": 102.25 },
+      "locationName": "Mongolia",
+      "description": "After a period of instability, Möngke, grandson of Genghis Khan, was elected Great Khan.",
+      "significance": "Möngke's rule saw renewed military campaigns and consolidation of Mongol power.",
+      "is_narrative": true,
+      "narrative_type": "succession",
+      "narrative_confidence": 0.85,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/M%C3%B6ngke_Khan",
+          "title": "Möngke Khan - Wikipedia"
+        }
+      ],
+      "ruler": "Möngke"
+    },
+    {
+      "id": "hulagu-campaign-1256",
+      "name": "Hulagu's Middle Eastern Campaign",
+      "type": "conquest",
+      "date": "1256-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 36.0, "lng": 51.4 },
+      "locationName": "Persia",
+      "description": "Hulagu Khan led a massive Mongol army into the Middle East with orders to subdue all Muslims who refused submission.",
+      "significance": "This campaign would devastate the Islamic world's political and cultural centers, ending the Abbasid Caliphate.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.91,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Abbasid_Caliphate",
+          "title": "Mongol conquest of the Abbasid Caliphate - Wikipedia"
+        }
+      ],
+      "ruler": "Möngke"
+    },
+    {
+      "id": "baghdad-siege-1258",
+      "name": "Siege and Destruction of Baghdad",
+      "type": "battle",
+      "date": "1258-02-10",
+      "dateUncertainty": "exact",
+      "location": { "lat": 33.3152, "lng": 44.3661 },
+      "locationName": "Baghdad, Iraq",
+      "description": "Hulagu Khan's forces besieged and captured Baghdad, executing the last Abbasid Caliph and massacring much of the population. Libraries and scholarly works were destroyed.",
+      "significance": "Weatherford notes the fall of Baghdad ended the Abbasid Caliphate (750-1258) and is seen as marking the end of the Islamic Golden Age. The city's population dropped from 1 million to 100,000.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.97,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Baghdad_(1258)",
+          "title": "Siege of Baghdad (1258) - Wikipedia"
+        }
+      ],
+      "ruler": "Möngke",
+      "casualties": {
+        "opponents": 200000
+      },
+      "outcome": "Mongol victory"
+    },
+    {
+      "id": "kublai-elected-1260",
+      "name": "Kublai Khan Proclaimed Great Khan",
+      "type": "political",
+      "date": "1260-05-05",
+      "dateUncertainty": "month",
+      "location": { "lat": 42.0, "lng": 119.0 },
+      "locationName": "Shangdu (Xanadu), China",
+      "description": "Kublai Khan was proclaimed Great Khan, though his younger brother Ariq Böke contested the succession, leading to civil war.",
+      "significance": "Weatherford describes Kublai's reign as marking a shift toward Chinese administration and the beginning of the empire's fragmentation. Chapter 8: Khubilai Khan and the New Mongol Empire.",
+      "is_narrative": true,
+      "narrative_type": "succession",
+      "narrative_confidence": 0.90,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kublai_Khan",
+          "title": "Kublai Khan - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai"
+    },
+    {
+      "id": "toluid-civil-war-1264",
+      "name": "End of Toluid Civil War",
+      "type": "political",
+      "date": "1264-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 45.0, "lng": 100.0 },
+      "locationName": "Mongol Empire",
+      "description": "Kublai Khan defeated his brother Ariq Böke, consolidating his position as Great Khan.",
+      "significance": "Kublai established control, but Weatherford notes the empire was now effectively divided into separate khanates.",
+      "is_narrative": true,
+      "narrative_type": "political",
+      "narrative_confidence": 0.85,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kublai_Khan",
+          "title": "Kublai Khan - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai"
+    },
+    {
+      "id": "yuan-dynasty-1271",
+      "name": "Establishment of Yuan Dynasty",
+      "type": "political",
+      "date": "1271-12-18",
+      "dateUncertainty": "exact",
+      "location": { "lat": 39.9, "lng": 116.4 },
+      "locationName": "Beijing (Dadu), China",
+      "description": "Kublai Khan officially issued an imperial edict giving the empire the Han-style dynastic name 'Great Yuan', establishing the Yuan Dynasty.",
+      "significance": "Weatherford emphasizes this showed Mongols adopting Chinese imperial framework. First non-Han dynasty to rule all China.",
+      "is_narrative": true,
+      "narrative_type": "political",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yuan_dynasty",
+          "title": "Yuan Dynasty - Wikipedia",
+          "notes": "Chapter 8: Khubilai Khan and the New Mongol Empire"
+        }
+      ],
+      "ruler": "Kublai"
+    },
+    {
+      "id": "song-conquest-1279",
+      "name": "Conquest of Song Dynasty Complete",
+      "type": "conquest",
+      "date": "1279-03-19",
+      "dateUncertainty": "exact",
+      "location": { "lat": 21.6167, "lng": 111.9833 },
+      "locationName": "Yamen, China",
+      "description": "The Yuan conquest of the Song Dynasty was completed. Kublai became the first non-Han emperor to rule all of China proper.",
+      "significance": "Weatherford notes this unified all of China under Mongol rule for the first time, completing the conquest begun in 1211.",
+      "is_narrative": true,
+      "narrative_type": "territorial_expansion",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Yamen",
+          "title": "Battle of Yamen - Wikipedia"
+        }
+      ],
+      "ruler": "Kublai"
+    },
+    {
+      "id": "plague-begins-1331",
+      "name": "Bubonic Plague Begins in China",
+      "type": "cultural",
+      "date": "1331-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 35.0, "lng": 110.0 },
+      "locationName": "China",
+      "description": "The plague started in China. Weatherford notes China lost half its population in the next twenty years.",
+      "significance": "Beginning of pandemic that would devastate Eurasia. Weatherford argues the Mongol-created trade networks enabled the plague's spread, contributing to the empire's collapse.",
+      "is_narrative": true,
+      "narrative_type": "disaster",
+      "narrative_confidence": 0.85,
+      "sources": [
+        {
+          "type": "curated",
+          "url": "https://en.wikipedia.org/wiki/Black_Death",
+          "title": "Weatherford - Part III: The Global Awakening (1262-1962)"
+        }
+      ],
+      "ruler": "Kublai"
+    },
+    {
+      "id": "ilkhanate-collapse-1335",
+      "name": "Collapse of Ilkhanate (Persia)",
+      "type": "political",
+      "date": "1335-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 35.0, "lng": 55.0 },
+      "locationName": "Persia (Iran)",
+      "description": "The Ilkhanate (Mongol-ruled Persia) collapsed due to rebellion and fragmentation.",
+      "significance": "Weatherford describes this as the loss of Mongol control over western territories, beginning the empire's fragmentation.",
+      "is_narrative": true,
+      "narrative_type": "collapse",
+      "narrative_confidence": 0.8,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ilkhanate",
+          "title": "Ilkhanate - Wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "plague-europe-1347",
+      "name": "Plague Reaches Europe",
+      "type": "cultural",
+      "date": "1347-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 45.0, "lng": 15.0 },
+      "locationName": "Europe",
+      "description": "The plague spread along Mongol trade routes, reaching Europe by 1347. Weatherford notes Europe would lose a third of its population.",
+      "significance": "The interconnected world created by the Mongols enabled the pandemic's spread. Weatherford argues this paradoxically shows both the power and vulnerability of the global system they created.",
+      "is_narrative": true,
+      "narrative_type": "disaster",
+      "narrative_confidence": 0.9,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Black_Death",
+          "title": "Black Death - Wikipedia",
+          "notes": "Weatherford - Part III: Plague travels along Mongol-created networks"
+        }
+      ]
+    },
+    {
+      "id": "yuan-falls-1368",
+      "name": "Fall of Yuan Dynasty",
+      "type": "political",
+      "date": "1368-01-01",
+      "dateUncertainty": "year",
+      "location": { "lat": 39.9, "lng": 116.4 },
+      "locationName": "Beijing, China",
+      "description": "Ming rebels took over China, ending Mongol rule. Weatherford notes the Ming built walls to keep others out and themselves in.",
+      "significance": "End of Mongol Empire as a unified entity. Weatherford argues the Mongol legacy persisted in trade networks, legal systems, and cultural exchange they established. Part III concludes with empire's collapse and lasting influence.",
+      "is_narrative": true,
+      "narrative_type": "collapse",
+      "narrative_confidence": 0.95,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Yuan_dynasty",
+          "title": "Yuan Dynasty - Wikipedia",
+          "notes": "Weatherford - Final collapse marking end of Mongol rule"
+        }
+      ]
+    }
+  ]
+}
